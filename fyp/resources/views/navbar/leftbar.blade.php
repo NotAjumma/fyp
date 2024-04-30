@@ -43,13 +43,15 @@
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
         </div>
-    </header><!-- End Header -->
+    </div>
+
+    </header><!-- End Header -->@yield('header')
     <!-- End Header -->
 <!--Leftsidebar-->
 <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
         <ul class="list-unstyled components mb-5">
-            <li><a href="#"><span class="nav-link"></span> Management of Information Security</a></li><!-- Back to overview page -->
+            <li><a href="#"><span class="nav-link"></span>@yield('title')</a></li><!-- Back to overview page -->
             <li><a href="#"><span class="nav-link"></span> Chapter 1</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 2</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 3</a></li>

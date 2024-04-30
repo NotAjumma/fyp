@@ -1,21 +1,26 @@
 @extends('navbar.leftbar')
 
+@section('title')
+    Management of Information Security
+@endsection
+
 @section('content')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link href="{{ asset ('import/style.css')}}" rel="stylesheet">
 
 <!-- Scripts -->
 <div class="wrapper d-flex align-items-stretch">
+    @yield('chapter')
     <div id="content" class="p-4 p-md-5 pt-5">
-        <h1 class="mb-4">Chapter 1: Introduction to Information Security Management</h1>
+        <h1 class="mb-4">Chapter 1: Introduction to Information Security Management @yield('chaptitle')</h1>
         <!-- Box with text in the middle -->
         <div class="text-center bg-light p-4">
+            @yield('overview')
             <p>An overview of information security is provided in this chapter, along with information on its properties, sources, and effects on both persons and organizations.
                 Additionally, it addresses the ISO/IEC 27002 standard and how information security relates to the SDGs and Maqasid Shariah.
             </p>
         </div>
-        <h2 class="mb-4">Overview Content of Management of Information Security</h2>
-        <h3>Let's start our lesson!</h3>
+
         <h4>Video lesson links</h4>
         <div class="link">
             <i class="fas fa-file-video"></i>
@@ -30,15 +35,16 @@
 
         <h4>Visual Notes:</h4>
         <div class="link">
-            <i class="fas fa-file-video"></i>
+            <i class="fas fa-file-import"></i>
             <a href="https://www.youtube.com/watch?v=Wp_9nsEHjn8">Intro to InfoSec</a><!-- Link to external video -->
         </div>
 
         <h4>Exercise Module:</h4>
         <div class="link">
-            <i class="fas fa-file-video"></i>
+            <i class="fas fa-file-import"></i>
             <a href="https://www.youtube.com/watch?v=Wp_9nsEHjn8">Intro to InfoSec</a><!-- Link to external video -->
         </div>
     </div>
+</div>
 </div>
 @endsection
