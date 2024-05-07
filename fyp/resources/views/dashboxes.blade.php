@@ -134,14 +134,14 @@ row::after {
   .gallery-item img {
     max-width: 110%;
     min-width: 110%;
-    height: 50%;
+    height: 70%;
   }
   .textbox {
     margin-top: 0px; /* Add some space between image and textbox */
     text-align:center;
     background-color: #c6c6c6;
     width: 110%;
-    height: auto;
+    height: 27%;
   }
   .textbox p{
     font-size: 12px;
