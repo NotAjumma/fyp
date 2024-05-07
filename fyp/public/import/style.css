@@ -43,13 +43,13 @@ main {
     padding: 20px 0;
 }
 
-.card {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
+/*card {
+    background-color: #d6caca;
+    padding: 10px;
+    margin-bottom: 0px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+}*/
 
 .link {
     display: flex;
