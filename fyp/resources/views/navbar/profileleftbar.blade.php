@@ -37,8 +37,8 @@
            <ul>
                 <li><a class="nav-link" href="{{ route('landingpage') }}">Home</a></li>
                 <li><a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li><a class="nav-link scrollto active" href="{{ route('articlepage') }}">Article</a></li>
-                <li><a class="nav-link" href="{{ route('profile.profilefrontpage') }}">Profile</a></li>
+                <li><a class="nav-link" href="{{ route('articlepage') }}">Article</a></li>
+                <li><a class="nav-link scrollto active" href="{{ route('profile.profilefrontpage') }}">Profile</a></li>
             </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

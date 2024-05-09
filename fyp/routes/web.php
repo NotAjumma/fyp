@@ -14,6 +14,8 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProfileFrontPageController;
+use App\Http\Controllers\UserFeedbackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,6 +59,8 @@ Route::get('/riskchapter', [RiskChapterController::class, 'index'])->name('chapt
 Route::get('/auditchapter', [AuditChapterController::class, 'index'])->name('chapter.auditchapterpage');
 
 Route::get('/article', [ArticleController::class, 'index'])->name('articlepage');
+Route::get('/profile', [ProfileFrontPageController::class, 'index'])->name('profile.profilefrontpage');
+Route::get('/feedback', [UserFeedbackController::class, 'index'])->name('feedback.userfeedback');
 
 Route::get('/get-file', [ChapterController::class, 'getFile'])->name('get-file');
 
