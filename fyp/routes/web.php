@@ -10,6 +10,7 @@ use App\Http\Controllers\RiskChapterController;
 use App\Http\Controllers\AuditChapterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UploadFileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArticleController;
@@ -26,6 +27,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('landingpage');
+});
 Route::get('/', [HomeController::class, 'index'])->name('landingpage');
 
 Route::get('/dashboard', function () {

@@ -69,12 +69,13 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background-image: url({{ asset ('import/assets/img/slide/slide-1.jpg')}});">
+          <div class="carousel-item active" style="background-image: url({{ asset('images/background.png') }});">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>SecurityJourney</span></h2>
+                <h2 class="animate__animated animate__fadeInDown">SecurityJourney:</h2>
+                <h2 class="animate__animated animate__fadeInDown">Online Information Security Learning System</h2>
                 <p class="animate__animated animate__fadeInUp">SecurityJourney delivers practical courses to assist everyone with their education. Join us on our path to becoming a skilled cybersecurity expert, one course at a time.</p>
-                <a href="#hero" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+                <a href="{{ route('dashboard') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
               </div>
             </div>
           </div>
