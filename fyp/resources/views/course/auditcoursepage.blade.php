@@ -1,4 +1,4 @@
-@extends('navbar.leftbar')
+@extends('navbar.auditleftbar')
 
 @section('content')
 <!-- Page Content  -->
@@ -15,11 +15,11 @@
             </div>
             <br><br>
 
-        <p><h2 class="mb-4">Overview Content of Business Continuity & Disaster Recovery</h2></p>
+        <p><h2 class="mb-4">Overview Content of Control & Audit of Information System</h2></p>
             <!-- Box with text in the middle for overview-->
             <div class="text-center bg-light p-4">
-                <p>Methods and procedures are used to help a company recover from a disaster and resume normal business activities.
-                   It incorporates both IT and business duties in the aftermath of a disaster.</p>
+                <p>IT audits ensure that controls protect company assets, preserve data integrity, and align with business goals.
+                    It confirms the proper functioning of information-related controls and processes.</p>
             </div>
     </div>
 </div>

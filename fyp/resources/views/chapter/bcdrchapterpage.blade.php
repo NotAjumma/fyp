@@ -1,8 +1,6 @@
-@extends('navbar.leftbar')
+@extends('navbar.bcdrleftbar')
 
-@section('title')
-    Management of Information Security
-@endsection
+
 
 @section('content')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -12,7 +10,7 @@
 <div class="wrapper d-flex align-items-stretch">
     @yield('chapter')
     <div id="content" class="p-4 p-md-5 pt-5">
-        <h1 class="mb-4">Chapter 1: Introduction to Information Security Management @yield('chaptitle')</h1>
+        <h1 class="mb-4">Chapter 1: Business Continuity and Disaster Recovery Overview @yield('chaptitle')</h1>
         <!-- Box with text in the middle -->
         <div class="text-center bg-light p-4">
             @yield('overview')
@@ -30,7 +28,9 @@
         <h4>Reading Notes:</h4>
         <div class="link">
             <i class="fas fa-book"></i>
-            <a href="https://www.youtube.com/watch?v=Wp_9nsEHjn8">Intro to InfoSec</a><!-- Link to external video -->
+            <!--<a href="{{ asset('storage/private/private/uploads/Week 4 - Project Initiation.pdf') }}">Week 4 - Project Initiation.pdf</a>-->
+            <a href="{{ route('get-file') }}" target="_blank">Week 4 - Project Initiation.pdf</a>
+            <!--<a href="https://www.youtube.com/watch?v=Wp_9nsEHjn8">Intro to InfoSec</a> Link to external video -->
         </div>
 
         <h4>Visual Notes:</h4>

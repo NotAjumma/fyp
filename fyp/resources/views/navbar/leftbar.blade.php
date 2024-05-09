@@ -35,9 +35,9 @@
 
         <nav id="navbar" class="navbar">
            <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link" href="#hero">Dashboard</a></li>
-                <li><a class="nav-link" href="#hero">Article</a></li>
+                <li><a class="nav-link" href="{{ route('landingpage') }}">Home</a></li>
+                <li><a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li><a class="nav-link" href="{{ route('articlepage') }}">Article</a></li>
                 <li><a class="nav-link" href="#hero">Profile</a></li>
             </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -51,8 +51,8 @@
 <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar">
         <ul class="list-unstyled components mb-5">
-            <li><a href="#"><span class="nav-link"></span>@yield('title')</a></li><!-- Back to overview page -->
-            <li><a href="#"><span class="nav-link"></span> Chapter 1</a></li>
+            <li><a href="{{ route('course.coursepage') }}"><span class="nav-link"></span>Management of Information Security @yield('title')</a></li><!-- Back to overview page -->
+            <li><a href="{{ route('chapter.chapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 2</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 3</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 4</a></li>

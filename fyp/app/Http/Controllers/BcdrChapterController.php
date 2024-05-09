@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ChapterController extends Controller
+class BcdrChapterController extends Controller
 {
     public function index(){
-        return view('chapter.chapterpage');
+        return view('chapter.bcdrchapterpage');
     }
 
     public function getFile()

@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ChapterController extends Controller
+class RiskChapterController extends Controller
 {
     public function index(){
-        return view('chapter.chapterpage');
+        return view('chapter.riskchapterpage');
     }
 
     public function getFile()
@@ -23,3 +23,4 @@ class ChapterController extends Controller
         ]);
     }
 }
+
