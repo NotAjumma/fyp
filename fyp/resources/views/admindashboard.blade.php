@@ -30,7 +30,7 @@
                   <div class="gallery-item">
                     <img src="{{ asset('images/feedback.jpg') }}" alt="FEEDBACK">
                     <div class="textbox">
-                        <a href="{{ route('coursepage') }}">Feedbacks</a>
+                        <a href="{{ route('course.coursepage') }}">Feedbacks</a>
                         <br>
 
                     </div>
@@ -38,7 +38,7 @@
                   <div class="gallery-item">
                     <img src="{{ asset('images/quiz.jpg') }}" alt="QUIZ">
                     <div class="textbox">
-                        <a href="{{ route('coursepage') }}">Manage Quiz</a>
+                        <a href="{{ route('course.coursepage') }}">Manage Quiz</a>
                         <br><br>
 
                     </div>
@@ -46,7 +46,7 @@
                   <!--<div class="gallery-item">
                     <img src="{{ asset('images/audit.jpg') }}" alt="AUDIT">
                     <div class="textbox">
-                        <a href="{{ route('coursepage') }}">Control & Audit of Information System</a>
+                        <a href="{{ route('course.coursepage') }}">Control & Audit of Information System</a>
                         <br>
                       <p>IT audits ensure that controls protect company assets, preserve data integrity, and align with business goals.
                         It confirms the proper functioning of information-related controls and processes.</p>

@@ -44,15 +44,15 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           @if (Route::has('login'))
                     @auth
-                        <!--<li><a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a></li>-->
+                        <li><a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a></li>
                     @else
-                        <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a></li>
+                        <li><a href="{{ route('login') }}"class="ml-4 text-sm text-gray-700 underline">Log in</a></li>
 
                         @if (Route::has('register'))
-                            <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a></li>
+                            <li><a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a></li>
                         @endif
                     @endauth
-            @endif
+                  @endif
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -62,9 +62,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <!--<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>-->
 
         <div class="carousel-inner" role="listbox">
 

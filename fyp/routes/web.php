@@ -32,6 +32,8 @@ Route::get('/', function () {
 });
 Route::get('/', [HomeController::class, 'index'])->name('landingpage');
 
+Auth::routes();
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -58,7 +60,8 @@ Route::get('/article', [ArticleController::class, 'index'])->name('articlepage')
 
 Route::get('/get-file', [ChapterController::class, 'getFile'])->name('get-file');
 
-//Route::get('/uploadfile', [UploadFileController::class, 'upload'])->name('uploadfile');
-//Route::post('/uploadfile', [UploadFileController::class, 'uploadPost'])->name('uploadfile.post');
+Route::get('/uploadfile', [UploadFileController::class, 'upload'])->name('uploadfile');
+Route::post('/uploadfile', [UploadFileController::class, 'uploadPost'])->name('uploadfile.post');
+
 
 //require __DIR__.'/auth.php';
