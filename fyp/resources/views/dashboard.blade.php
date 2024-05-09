@@ -27,29 +27,29 @@
 
                 <div class="gallery">
                   <div class="gallery-item">
-                    <a href="{{ route('coursepage') }}">
+                    <a href="{{ route('course.coursepage') }}">
                     <img src="{{ asset('images/mis.jpg') }}" alt="MIS">
                     <div class="textbox">
-                        <a href="{{ route('coursepage') }}">Management of Information Security</a>
+                        <a href="{{ route('course.coursepage') }}">Management of Information Security</a>
                       <!--<p>Learn how to manage information security efficiently. Prepare to excel in information security management, protecting systems
                         and networks in a world of increasing threats and successful cyber attacks. </p>-->
                     </div>
                   </div>
                   <div class="gallery-item">
-                    <a href="{{ route('bcdrcoursepage') }}">
+                    <a href="{{ route('course.bcdrcoursepage') }}">
                     <img src="{{ asset('images/bcdr.jpg') }}" alt="BCDR">
                     <div class="textbox">
-                        <a href="{{ route('bcdrcoursepage') }}">Business Continuity & Disaster Recovery</a>
+                        <a href="{{ route('course.bcdrcoursepage') }}">Business Continuity & Disaster Recovery</a>
                         <br>
                       <!--<p>Methods and procedures are used to help a company recover from a disaster and resume normal business activities.
                         It incorporates both IT and business duties in the aftermath of a disaster.</p>-->
                     </div>
                   </div>
                   <div class="gallery-item">
-                    <a href="{{ route('riskcoursepage') }}">
+                    <a href="{{ route('course.riskcoursepage') }}">
                     <img src="{{ asset('images/risk.jpeg') }}" alt="RISK">
                     <div class="textbox">
-                        <a href="{{ route('riskcoursepage') }}">Risk Management</a>
+                        <a href="{{ route('course.riskcoursepage') }}">Risk Management</a>
                         <br><br>
                       <!--<p>A continual process of identifying, analyzing, assessing, and managing potential risks that include
                          monitoring risk control processes as well as financial resources to reduce the negative effects of losses.
@@ -57,10 +57,10 @@
                     </div>
                   </div>
                   <div class="gallery-item">
-                    <a href="{{ route('auditcoursepage') }}">
+                    <a href="{{ route('course.auditcoursepage') }}">
                     <img src="{{ asset('images/audit.jpg') }}" alt="AUDIT">
                     <div class="textbox">
-                        <a href="{{ route('auditcoursepage') }}">Control & Audit of Information System</a>
+                        <a href="{{ route('course.auditcoursepage') }}">Control & Audit of Information System</a>
                         <br>
                       <!--<p>IT audits ensure that controls protect company assets, preserve data integrity, and align with business goals.
                         It confirms the proper functioning of information-related controls and processes.</p>-->

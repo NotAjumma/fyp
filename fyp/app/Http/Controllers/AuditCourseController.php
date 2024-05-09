@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AuditCourseController extends Controller
 {
     public function index(){
-        return view('auditcoursepage');
+        return view('course.auditcoursepage');
     }
 }

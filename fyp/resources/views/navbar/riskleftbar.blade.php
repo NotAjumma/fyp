@@ -36,22 +36,23 @@
         <nav id="navbar" class="navbar">
            <ul>
                 <li><a class="nav-link" href="{{ route('landingpage') }}">Home</a></li>
-                <li><a class="nav-link scrollto active" href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li><a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li><a class="nav-link" href="{{ route('articlepage') }}">Article</a></li>
                 <li><a class="nav-link" href="#hero">Profile</a></li>
             </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
         </div>
-    </header><!-- End Header -->
+    </div>
+
+    </header><!-- End Header -->@yield('header')
     <!-- End Header -->
 <!--Leftsidebar-->
 <div class="wrapper d-flex align-items-stretch">
-    <nav id="dashsidebar">
-        <!--
+    <nav id="sidebar">
         <ul class="list-unstyled components mb-5">
-            <li><a href="#"><span class="nav-link"></span> Management of Information Security</a></li> Back to overview page
-            <li><a href="#"><span class="nav-link"></span> Chapter 1</a></li>
+            <li><a href="{{ route('course.riskcoursepage') }}"><span class="nav-link"></span>Risk Management @yield('title')</a></li><!-- Back to overview page -->
+            <li><a href="{{ route('chapter.riskchapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 2</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 3</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 4</a></li>
@@ -64,7 +65,7 @@
             <li><a href="#"><span class="nav-link"></span> Chapter 11</a></li>
             <li><a href="#"><span class="nav-link"></span> Chapter 12</a></li>
             <li><a href="#"><span class="nav-link"></span> Quiz</a></li>
-        </ul>-->
+        </ul>
     </nav>
     <!-- End left side bar -->
     @yield('content')

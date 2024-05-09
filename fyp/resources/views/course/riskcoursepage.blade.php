@@ -1,4 +1,4 @@
-@extends('navbar.leftbar')
+@extends('navbar.riskleftbar')
 
 @section('content')
 <!-- Page Content  -->
