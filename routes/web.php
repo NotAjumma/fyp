@@ -89,6 +89,8 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::post('/browser-history/store', [BrowserHistoryController::class, 'store']);
 
+//admin
+Route::get('/manage-quiz', [AdminController::class, 'manageQuiz'])->name('manage-quiz');
 
 // Route::view('/login', 'login');
 
