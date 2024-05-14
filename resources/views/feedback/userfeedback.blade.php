@@ -1,6 +1,4 @@
-@extends('navbar.profileleftbar')
-@extends('profileoptions')
-
+@extends('navbar.dashboardleftbar')
 
 @section('content')
 
