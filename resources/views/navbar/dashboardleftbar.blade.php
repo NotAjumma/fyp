@@ -5,7 +5,7 @@
     <x-header />
     <!-- End Header -->
     <!--Leftsidebar-->
-    <div class="wrapper d-flex align-items-stretch" style="margin-top: 4.5rem;">
+    <div class="wrapper d-flex align-items-stretch">
         @if(request()->url() == route('course.bcdrcoursepage') || request()->url() == route('chapter.bcdrchapterpage'))
         <nav id="sidebar">
             <ul class="list-unstyled components mb-5">
@@ -50,7 +50,7 @@
         <nav id="sidebar">
             <ul class="list-unstyled components mb-5">
                 <li><a href="{{ route('course.riskcoursepage') }}"><span class="nav-link"></span>Risk Management @yield('title')</a></li><!-- Back to overview page -->
-                <li><a href="{{ route('chapter.chapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
+                <li><a href="{{ route('chapter.riskchapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 2</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 3</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 4</a></li>
@@ -70,7 +70,7 @@
         <nav id="sidebar">
             <ul class="list-unstyled components mb-5">
                 <li><a href="{{ route('course.auditcoursepage') }}"><span class="nav-link"></span>Control & Audit of Information System @yield('title')</a></li><!-- Back to overview page -->
-                <li><a href="{{ route('chapter.chapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
+                <li><a href="{{ route('chapter.auditchapterpage') }}"><span class="nav-link"></span> Chapter 1</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 2</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 3</a></li>
                 <li><a href="#"><span class="nav-link"></span> Chapter 4</a></li>
