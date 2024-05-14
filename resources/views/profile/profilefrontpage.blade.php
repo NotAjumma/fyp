@@ -1,8 +1,5 @@
 @extends('navbar.dashboardleftbar')
 
-@extends('profileoptions')
-
-
 @section('content')
 
 <!-- Page Content  -->

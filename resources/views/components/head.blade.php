@@ -51,5 +51,41 @@
             display: flex;
             justify-content: center;
         }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: auto;
+            /* Adjust the width as needed */
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #1e2a2a;
+            display: flex;
+            background-color: #82C6C6;
+        }
+
+        .box img {
+            max-width: 250px;
+            /* Adjust the image size */
+            margin-right: 10px;
+            max-height: 350px;
+        }
+
+        .box p {
+            margin: 0;
+            color: black;
+        }
+
+        .box a {
+            text-decoration: none;
+            /* Remove underline from links */
+            color: blue;
+            /* Change link color */
+            font-weight: bold;
+            /* Make the titles bold */
+        }
     </style>
 </head>

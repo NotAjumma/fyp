@@ -1,8 +1,5 @@
 @extends('navbar.dashboardleftbar')
 
-@extends('articleboxes')
-
-
 @section('content')
 <!-- Page Content  -->
 <div class="wrapper d-flex align-items-stretch">
