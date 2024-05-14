@@ -33,7 +33,7 @@
     <script src="{{ asset ('import/navbar/js/popper.js')}}"></script>
     <script src="{{ asset ('import/navbar/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset ('import/navbar/js/main.js')}}"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
         .gallery-item {

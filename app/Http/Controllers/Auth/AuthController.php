@@ -27,18 +27,13 @@ class AuthController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
-        // If validation passes, proceed with user registration logic
-        // For example:
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        // Optionally, you can authenticate the user after registration
-        // Auth::login($user);
-
-        // Redirect to a specific route or page after successful registration
+        alert()->success('Success', 'Your account has been successfully registered!');
         return redirect()->route('login');
     }
 
@@ -51,19 +46,12 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Authentication passed...
-            // Retrieve the authenticated user's ID
             $userId = Auth::id();
-    
-            // Retrieve the user instance using the ID
+
             $user = User::find($userId);
-    
-            // Update the last_login_at timestamp for the user
             $user->last_login_at = now();
-    
-            // Save the updated user model to persist the changes to the database
             $user->save();
-    
+
             return redirect()->intended('dashboard');
         }
 

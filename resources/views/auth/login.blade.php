@@ -65,6 +65,7 @@
     </div>
   </div>
 </section>
+@include('sweetalert::alert')
 
 <head>
   <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/logins/login-5/assets/css/login-5.css">
