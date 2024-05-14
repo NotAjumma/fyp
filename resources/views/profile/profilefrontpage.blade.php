@@ -74,7 +74,13 @@
         <br>
         <hr class="short-line">
         <br>
-        <h3><a href="{{route('landingpage')}}" style="text-decoration: none; color: black;">Sign Out</a></h3>
+        <h3><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            <button type="submit">Logout</button>
+        </form>
+        
+            <a style="color: black;" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+        </h3>
 
     </div>
     <br><br>

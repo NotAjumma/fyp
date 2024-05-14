@@ -46,7 +46,7 @@
             </ul>
         </nav>
         @endif
-        @if(request()->url() == route('course.riskcoursepage') || request()->url() == route('chapter.chapterpage'))
+        @if(request()->url() == route('course.riskcoursepage') || request()->url() == route('chapter.riskchapterpage'))
         <nav id="sidebar">
             <ul class="list-unstyled components mb-5">
                 <li><a href="{{ route('course.riskcoursepage') }}"><span class="nav-link"></span>Risk Management @yield('title')</a></li><!-- Back to overview page -->
@@ -66,7 +66,7 @@
             </ul>
         </nav>
         @endif
-        @if(request()->url() == route('course.auditcoursepage') || request()->url() == route('chapter.chapterpage'))
+        @if(request()->url() == route('course.auditcoursepage') || request()->url() == route('chapter.auditchapterpage'))
         <nav id="sidebar">
             <ul class="list-unstyled components mb-5">
                 <li><a href="{{ route('course.auditcoursepage') }}"><span class="nav-link"></span>Control & Audit of Information System @yield('title')</a></li><!-- Back to overview page -->

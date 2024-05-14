@@ -1,4 +1,5 @@
-@extends('navbar.articleleftbar')
+@extends('navbar.dashboardleftbar')
+
 @extends('articleboxes')
 
 
@@ -7,13 +8,14 @@
 <div class="wrapper d-flex align-items-stretch">
     <div id="content" class="p-4 p-md-5 pt-5">
         <!-- Box with text in the middle -->
-            <div class="text-center bg-light p-4">
-                <h2>Articles on CyberAttacks</h2>
+        <div class="text-center bg-light p-4">
+            <h2>Articles on CyberAttacks</h2>
 
-            </div>
-            <br><br>
+        </div>
+        <br><br>
 
-        <div class="mb-4" style="text-align: center;">List of available articles: </h2></p>
+        <div class="mb-4" style="text-align: center;">List of available articles: </h2>
+            </p>
             <!-- Box with text in the middle for overview
             <div class="text-center bg-light p-4">
                 <p>la pariatur. Excepteur sint occa</p>
@@ -22,38 +24,59 @@
                     <p>diwjdkj</p>
                 </div>
             </div>-->
-    </div>
-    <div class="container">
-        <div class="box">
+        </div>
+        <div class="container">
+            <a href="https://ieeexplore.ieee.org/document/7592703">
 
-          <img src="{{ asset('images/article1.jpg') }}" alt="MIS">
-          <a href="https://ieeexplore.ieee.org/document/7592703">
-          <p>Cyber-Attack Modeling Analysis Techniques: An Overview</p>
-          <br>
-          <p>H. Al-Mohannadi, Q. Mirza, A. Namanya, I. Awan, A. Cullen and J. Disso, "Cyber-Attack Modeling Analysis Techniques: An Overview,
-            " 2016 IEEE 4th International Conference on Future Internet of Things and Cloud Workshops (FiCloudW), Vienna, Austria, 2016, pp. 69-76, doi: 10.1109/W-FiCloud.2016.29.</p>
-        </div>
-        <div class="box">
-          <img src="{{ asset('images/article3.jpg') }}" alt="MIS">
-          <a href="//academic.oup.com/cybersecurity/article/4/1/tyy006/5133288">
-            <p>A taxonomy of cyber-harms: Defining the impacts of cyber-attacks and understanding how they propagate</p>
-            <br>
-          <p>Ioannis Agrafiotis, Jason R C Nurse, Michael Goldsmith, Sadie Creese, David Upton, A taxonomy of cyber-harms:
-            Defining the impacts of cyber-attacks and understanding how they propagate,
-            Journal of Cybersecurity, Volume 4, Issue 1, 2018, tyy006, https://doi.org/10.1093/cybsec/tyy006.</p>
-        </div>
-        <div class="box">
-            <img src="{{ asset('images/article2.jpg') }}" alt="MIS">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <img style="width: 100%; max-width: 100%;" src="{{ asset('images/article1.jpg') }}" class="img-fluid" alt="MIS">
+                        </div>
+                        <div class="col-md-8 col-12">
+                            <p>Cyber-Attack Modeling Analysis Techniques: An Overview</p>
+                            <p>H. Al-Mohannadi, Q. Mirza, A. Namanya, I. Awan, A. Cullen and J. Disso, "Cyber-Attack Modeling Analysis Techniques: An Overview," 2016 IEEE 4th International Conference on Future Internet of Things and Cloud Workshops (FiCloudW), Vienna, Austria, 2016, pp. 69-76, doi: 10.1109/W-FiCloud.2016.29.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="//academic.oup.com/cybersecurity/article/4/1/tyy006/5133288">
+                <div class="box">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <img style="width: 100%;  max-width: 100%;" src="{{ asset('images/article3.jpg') }}" class="img-fluid" alt="MIS">
+                        </div>
+                        <div class="col-md-8 col-12">
+
+                            <p>A taxonomy of cyber-harms: Defining the impacts of cyber-attacks and understanding how they propagate</p>
+                            <p>Ioannis Agrafiotis, Jason R C Nurse, Michael Goldsmith, Sadie Creese, David Upton, A taxonomy of cyber-harms: Defining the impacts of cyber-attacks and understanding how they propagate, Journal of Cybersecurity, Volume 4, Issue 1, 2018, tyy006, https://doi.org/10.1093/cybsec/tyy006.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
             <a href="https://ieeexplore.ieee.org/abstract/document/4983396">
-                <p>Cyberattacks: Why, What, Who, and How</p>
-                <br>
-            <p>S. Liu and B. Cheng, "Cyberattacks: Why, What, Who, and How," in IT Professional, vol. 11, no. 3, pp. 14-21,
-                May-June 2009, doi: 10.1109/MITP.2009.46.</p>
-          </div>
+                <div class="box">
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <img style="width: 100%; max-width: 100%;" src="{{ asset('images/article2.jpg') }}" class="img-fluid" alt="MIS">
+                        </div>
+                        <div class="col-md-8 col-12">
 
-        <!-- Add more boxes as needed -->
-      </div>
-    <!--<div class="container">
+                            <p>Cyberattacks: Why, What, Who, and How</p>
+                            <p>S. Liu and B. Cheng, "Cyberattacks: Why, What, Who, and How," in IT Professional, vol. 11, no. 3, pp. 14-21, May-June 2009, doi: 10.1109/MITP.2009.46.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Add more boxes as needed -->
+        </div>
+
+
+
+        <!--<div class="container">
         <div class="box">
             <img src="{{ asset('images/mis.jpg') }}" alt="MIS">
             <div class="content">
@@ -84,6 +107,6 @@
         </div>
          Add more boxes as needed
     </div>-->
-</div>
+    </div>
 
-@endsection
+    @endsection

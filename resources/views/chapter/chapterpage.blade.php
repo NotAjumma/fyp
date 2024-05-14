@@ -27,7 +27,7 @@
         <div class="link">
             <i class="fas fa-book"></i>
             <!--<a href="{{ asset('storage/private/private/uploads/Week 4 - Project Initiation.pdf') }}">Week 4 - Project Initiation.pdf</a>-->
-            <a href="{{ route('get-file') }}" target="_blank">Week 4 - Project Initiation.pdf</a>
+            <a href="{{ route('view-pdf', ['filename' => 'readPDF.pdf']) }}" target="_blank">Week 4 - Project Initiation.pdf</a>
             <!--<a href="https://www.youtube.com/watch?v=Wp_9nsEHjn8">Intro to InfoSec</a> Link to external video -->
         </div>
 
