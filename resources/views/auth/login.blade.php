@@ -3,7 +3,7 @@
 <x-header />
 
 
-<section class="p-3 p-md-4 p-xl-5">
+<section class="p-3 p-md-4 p-xl-5" style="margin-top: 4.5rem;">
   <div class="container">
     <div class="card border-light-subtle shadow-sm">
       <div class="row g-0">
@@ -33,14 +33,14 @@
                   <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
                   <input type="email" class="form-control" name="email" id="email" placeholder="name@gmail.com" required>
                   @error('email')
-                  <span>{{ $message }}</span>
+                  <span style="color: red;">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="col-12">
                   <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
                   <input type="password" class="form-control" name="password" id="password" value="" required>
                   @error('password')
-                  <span>{{ $message }}</span>
+                  <span style="color: red;">{{ $message }}</span>
                   @enderror
                 </div>
                 <div class="col-12">

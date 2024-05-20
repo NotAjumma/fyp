@@ -85,6 +85,22 @@ h6 {
   font-weight: 400;
 }
 
+#header .logo h1 {
+  font-size: 2em; /* Default font size for larger screens */
+}
+
+@media (max-width: 768px) {
+  #header .logo h1 {
+      font-size: 1.3rem; /* Smaller font size for tablets and mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  #header .logo h1 {
+      font-size: 1.1rem; /* Even smaller font size for small mobile devices */
+  }
+}
+
 #header .logo h1 a,
 #header .logo h1 a:hover {
   color: #425451;
@@ -254,6 +270,7 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+    z-index: 1000;
   }
 
   .navbar ul {

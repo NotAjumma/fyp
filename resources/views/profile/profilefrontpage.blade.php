@@ -8,21 +8,19 @@
         <!-- Box with text in the middle -->
         <h1> Hi, {{ $username }}!</h1>
         <br><br>
-        <!-- Check if the user is authenticated -->
         @if(auth()->check())
-        <!-- Retrieve the last login time of the current user -->
         @php
         $lastLoginTime = auth()->user()->last_login_at;
         @endphp
+        @if(Auth::check() && Auth::user()->isAdmin())
 
-        <!-- Format the timestamp into a human-readable format -->
+        @else
         @if($lastLoginTime)
         <div style="margin-bottom: 1rem;">
             <strong>The last page you visited: </strong>
         </div>
 
 
-        <!-- Retrieve the URL of the last page the user visited -->
         @php
         $lastVisitedUrl = auth()->user()->browserHistories()
         ->orderByDesc('created_at')
@@ -58,17 +56,20 @@
         <p>Welcome, first-time user!</p>
         @endif
         @endif
-
+        @endif
 
         <br><br>
 
         <!--<div class="text-center bg-light p-4">-->
         <h3><a href="{{route('dashboard')}}" style="text-decoration: none; color: black;">Edit Profile</a></h3>
         <br>
+        
+        @if(Auth::check() && !Auth::user()->isAdmin())
         <hr class="short-line">
         <br>
         <h3><a href="{{route('feedback.userfeedback')}}" style="text-decoration: none; color: black;">Feedback</a></h3>
         <br>
+        @endif
         <hr class="short-line">
         <br>
         <h3><form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

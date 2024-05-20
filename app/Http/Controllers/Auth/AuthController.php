@@ -41,6 +41,10 @@ class AuthController extends Controller
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
+        $role = 'user'; 
+        if ($request->is_admin) {
+            $role = 'admin'; 
+        }
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,

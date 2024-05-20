@@ -37,6 +37,11 @@ return [
             'visibility' => 'private',
         ],
 
+        'private_uploads' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private/uploads'),
+        ],        
+
 
         'local' => [
             'driver' => 'local',

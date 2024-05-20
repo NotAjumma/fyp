@@ -17,6 +17,8 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ProfileFrontPageController;
 use App\Http\Controllers\UserFeedbackController;
+use App\Http\Controllers\PdfFileController;
+use App\Http\Controllers\Admin\QuizController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
@@ -35,10 +37,11 @@ use App\Http\Controllers\BrowserHistoryController;
 /*Route::get('/', function () {
     return view('landingpage');
 });*/
+
 Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/home', [LandingPageController::class, 'index'])->name('home');
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -57,20 +60,24 @@ Route::get('/auditcourse', [AuditCourseController::class, 'index'])->name('cours
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/admindash', [AdminController::class, 'index'])->name('admindashboard');
 
-Route::get('/chapterpage', [ChapterController::class, 'index'])->name('chapter.chapterpage');
-Route::get('/bcdrchapter', [BcdrChapterController::class, 'index'])->name('chapter.bcdrchapterpage');
-Route::get('/riskchapter', [RiskChapterController::class, 'index'])->name('chapter.riskchapterpage');
-Route::get('/auditchapter', [AuditChapterController::class, 'index'])->name('chapter.auditchapterpage');
+Route::get('/chapterpage', [CourseController::class, 'chapter'])->name('chapter.chapterpage');
+Route::get('/bcdrchapter', [BcdrCourseController::class, 'chapter'])->name('chapter.bcdrchapterpage');
+Route::get('/riskchapter', [RiskCourseController::class, 'chapter'])->name('chapter.riskchapterpage');
+Route::get('/auditchapter', [AuditCourseController::class, 'chapter'])->name('chapter.auditchapterpage');
 
 Route::get('/article', [ArticleController::class, 'index'])->name('articlepage');
 Route::get('/profile', [ProfileFrontPageController::class, 'index'])->name('profile.profilefrontpage');
+
+//Feedback
 Route::get('/feedback', [UserFeedbackController::class, 'index'])->name('feedback.userfeedback');
+Route::post('/feedback', [UserFeedbackController::class, 'store'])->name('feedback.store');
+Route::get('/admin/feedback', [UserFeedbackController::class, 'index'])->name('admin.feedback.index')->middleware('auth:admin');
 
 Route::get('/get-file', [ChapterController::class, 'getFile'])->name('get-file');
 
 Route::get('/view-pdf/{filename}', function ($filename) {
-    $filePath = storage_path('app/private/uploads/' . $filename);
-    if (!Storage::disk('private')->exists('uploads/' . $filename)) {
+    $filePath = storage_path('app/public/upload_pdfs/' . $filename);
+    if (!Storage::disk('public')->exists('upload_pdfs/' . $filename)) {
         abort(404);
     }
     return response()->file($filePath);
@@ -90,7 +97,34 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/browser-history/store', [BrowserHistoryController::class, 'store']);
 
 //admin
-Route::get('/manage-quiz', [AdminController::class, 'manageQuiz'])->name('manage-quiz');
+
+Route::group(['middleware' => 'isAdmin'], function () {
+    Route::get('quizzes', [QuizController::class, 'index'])->name('quizzes.index');
+    Route::get('quizzes/create', [QuizController::class, 'createQuiz'])->name('quizzes.create');
+    Route::post('quizzes', [QuizController::class, 'storeQuiz'])->name('quizzes.store');
+    Route::get('quizzes/{quiz}/questions/create', [QuizController::class, 'createQuestion'])->name('questions.create');
+    Route::post('questions', [QuizController::class, 'storeQuestion'])->name('questions.store');
+    Route::put('/quizzes/{quiz}/status', [QuizController::class, 'updateStatus'])->name('quizzes.updateStatus');
+    Route::delete('/quizzes/delete{id}', [QuizController::class, 'destroy'])->name('quizzes.delete');
+    Route::get('/quizzes/{quiz}/edit', [QuizController::class, 'edit'])->name('quizzes.edit');
+    Route::put('/quizzes/{quiz}', [QuizController::class, 'submitEdit'])->name('quizzes.update');
+
+    // Handle upload files
+    Route::get('upload-files', [PdfFileController::class, 'index'])->name('uploadFiles.index');
+    Route::resource('pdf_files', PdfFileController::class);
+    Route::delete('/pdf_files/delete{id}', [PdfFileController::class, 'destroy'])->name('pdf_files.delete');
+
+    //feedbacks
+    Route::get('admin/feedbacks', [UserFeedbackController::class, 'view'])->name('feedbacks.view');
+    Route::delete('/feedback/delete{id}', [UserFeedbackController::class, 'destroy'])->name('feedbacks.delete');
+
+
+});
+
+Route::get('{courseName}/quizzes/{id}', [QuizController::class, 'view'])->name('quizzes.view');
+Route::post('{courseName}/quizzes/{id}/submit', [QuizController::class, 'submitQuiz'])->name('submit-quiz');
+
+
 
 // Route::view('/login', 'login');
 

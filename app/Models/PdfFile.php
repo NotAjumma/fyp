@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserFeedback extends Model
+class PdfFile extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'feedback',
-        'user_id',
-        
+        'file_path',
+        'file_name',
+        'chapter',
+        'course',
     ];
 }

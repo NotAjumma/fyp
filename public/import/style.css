@@ -8,11 +8,11 @@ body {
     padding: 0;
     background-color: #ffffff;
 }
-
+/* 
 .container {
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 header {
     background-color: #333;
@@ -51,7 +51,7 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }*/
 
-.link {
+/* .link {
     display: flex;
     align-items: left;
     justify-content: left;
@@ -59,4 +59,4 @@ main {
 
 .link i {
     margin-right: 10px;
-}
+} */

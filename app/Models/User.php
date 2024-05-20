@@ -1,4 +1,5 @@
 <?php
+// app/Models/User.php
 
 namespace App\Models;
 
@@ -10,11 +11,6 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'name',
         'email',
@@ -22,24 +18,14 @@ class User extends Authenticatable
         'role'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'last_login_at' => 'datetime', // Add this line to cast last_login_at to datetime
+        'last_login_at' => 'datetime',
     ];
 
     public function browserHistories()
@@ -50,5 +36,10 @@ class User extends Authenticatable
     public function isAdmin()
     {
         return $this->role === 'admin';
+    }
+
+    public function quizzes()
+    {
+        return $this->belongsToMany(Quiz::class)->withPivot('score', 'is_passed');
     }
 }

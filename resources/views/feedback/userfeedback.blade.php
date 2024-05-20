@@ -1,11 +1,15 @@
 @extends('navbar.dashboardleftbar')
 
 @section('content')
-
-<!-- Page Content  -->
 <div class="wrapper d-flex align-items-stretch">
     <div id="content" class="p-4 p-md-5 pt-5">
-        <!-- Box with text in the middle -->
+        @if (session('status'))
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        toastr.success('{{ session('status') }}');
+                    });
+                </script>
+            @endif
         <a href="{{route('profile.profilefrontpage')}}"><-Back</a>
         <br><br>
 
@@ -15,23 +19,21 @@
         <br><br>
         <p>Please leave your feedback in the form below:</p>
         <br>
-        <p> (feedback form here which the table of user feedbacks will display in the admin list of feedback page.)</p>
 
-            <br><br>
-
-        <!--<div class="mb-4" style="text-align: center;">List of available articles: </h2></p>
-             Box with text in the middle for overview
-            <div class="text-center bg-light p-4">
-                <p>la pariatur. Excepteur sint occa</p>
-                <br><br>
-                <div class="text-center bg-light p-4">
-                    <p>diwjdkj</p>
-                </div>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
             </div>
+        @endif
+
+        <form action="{{ route('feedback.store') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label for="content">Feedback:</label>
+                <textarea style="min-height: 50vh;" name="feedback" id="content" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary">Submit Feedback</button>
+        </form>
     </div>
-
-
 </div>
-
 @endsection
-

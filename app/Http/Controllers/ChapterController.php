@@ -14,7 +14,7 @@ class ChapterController extends Controller
 
     public function getFile()
     {
-        $filePath = 'app\private\private\uploads\Week 4 - Project Initiation.pdf'; // Replace 'your_file_name.ext' with the actual file name
+        $filePath = 'app\private\private\uploads\Week 4 - Project Initiation.pdf'; 
         $fileContents = Storage::disk('private')->get($filePath);
 
         return response()->make($fileContents, 200, [

@@ -13,11 +13,14 @@
     <link href="{{ asset('import/assets/img/favicon.png')}}" rel="icon">
     <link href="{{ asset('import/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
     <link rel="stylesheet" href="{{ asset ('import/navbar/css/style.css')}}">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="{{ asset('import/assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
     <link href="{{ asset('import/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -25,7 +28,7 @@
     <link href="{{ asset('import/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
     <link href="{{ asset('import/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
     <link href="{{ asset('import/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"> -->
     <!-- Template Main CSS File -->
     <link href="{{ asset('import/assets/css/style.css')}}" rel="stylesheet">
 
@@ -35,7 +38,38 @@
     <script src="{{ asset ('import/navbar/js/main.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Toastr) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selects = document.querySelectorAll('.status-select');
+            selects.forEach(select => {
+                select.className = select.options[select.selectedIndex].className;
+            });
+        });
+    </script>
     <style>
+        .enabled {
+            background-color: yellow;
+            border-radius: 5px;
+            padding: 2px;
+
+        }
+
+        .disabled {
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            padding: 2px;
+        }
+
         .gallery-item {
             height: 100%;
         }
